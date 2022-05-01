@@ -1,4 +1,5 @@
-<img  title=""  src="./img/title.PNG"  alt=""  width="950">
+<img src="img/title.png" width="950" style="display:block; margin-left:auto; margin-right:auto;"/>
+<br>
 
 # [![N|Solid](https://cercle-informatique.be/static/media/logo.0588bd89.png)](https://cercle-informatique.be) CI-PO (Cerk Info Program Organization)
 
@@ -6,11 +7,26 @@ CI-PO est un robot Discord proposé par le **Cerkinfo A.S.B.L**. Son but est d'a
 
 ## Table des matières
 
+* Disclaimer
 * HOW TO Utilisateur
 * HOW TO Developpeur
 * License Open Source
 * Contact - Report Bug
-* Crédit
+* Crédit & Historique MAJ
+
+## Disclaimer
+1 ) Ce robot est conçu pour gérer les erreurs humaines (pas fait exprès), pas pour gérer les erreurs volontaires de troll. Si le bot bug, il ne sera pas planté pour autant, par contre il est possible que votre configuration soit bugger et que vous deviez TOUT recommencer.
+
+Pas de stress, si vous suivez les demandent du robot scrupuleusement, il n'y aura normalement aucun soucis !
+Mais si votre configuration a buggé, contactez la personne de contact mit sur le menu principal, elle vous aidera sous-peu.
+
+(Si vous trollez trop, on aide plus, même si c'est plus une troll-error, tant pis !)
+
+2 ) Dû aux nombreuses opération effectuées en background (en vous épargnant les détails), il se peut que certaines fois le robot se bloque ou ne fait plus rien pendant quelques millisecondes, celà est normal ! Nous vous demandons d'être patient SVP.
+
+Ne ne pouvons malheureusement rien y faire, c'est Discord qui doit gérer des demandes de millairds de robot en même temps et qui ne peut faire toutes les opérations demandé immédiatement...
+
+Si vous ne faites rien d'autres que ce que le robot vous demande, il n'y a aucune chance qu'il soit buggé, il faut juste attendre. Il ne se peut par contre, qu'il soit bloqué plus d'1 minute ! Si c'est le cas, il y a un soucis soit avec le robot en général soit avec Discord. Contactez le responsable mentionné dans la section `Contact - Report Bug`.
 
 ## HOW TO Utilisateur
 Lors de ce HOW TO nous partirons du principe que vous avez des bases minimum sur l'utilisation de l'application Discord. Si ce n'est le cas, nous vous conseillons de faire quelques recherches et tests en local sur les sujets suivants : La création d'une catégorie et d'un channel écrit, les permissions donné à des personnes et/ou des rôles et la gestion d'un bot Discord.
@@ -42,6 +58,15 @@ Les templates disponible sont les suivant :
 Lors de ce HOW TO nous considérerons que vous êtes un programmeur Python aguerri ayant connaissance de la Programmation Orienté Objet ainsi que de ses bonnes pratiques. Cependant ce projet étant très intéressant pour un meilleur apprentissage de cette notion de programmation et étant fait par des étudiants pour des étudiants, certains détails seront simplifié ou expliqué pour être accessible à des BA1.
 Aussi, il sera supposé que vous avez pris connaissance de la documentation de l'[API Discord](https://discordpy.readthedocs.io/en/latest/api.html), et que vous savez l'utiliser (si ce n'est le cas, nous vous conseillons la vidéo suivante : https://www.youtube.com/watch?v=LWUmi-5Dybs, qui vous expliquera de la création d'un UserBot aux règles de base de la programmation d'un bot Discord).
 Si vous souhaitez un peu plus de visuel que ce gros texte ci-dessous, vous pouvez vous appuyer sur le templates `Beer` qui est le tout premier qui a été codé et qui est l'initateur de ce projet. Vous y verrez les critères cité ci-dessous.
+
+### Bot local
+Comme vous le savez ou venez de l'apprendre dans la vidéo mentionné ci-dessus, il vous faut une "TOKEN" pour pouvoir utiliser un Bot Discord. La clé ne peut se trouver dans le code Python comme dans la vidéo, pour CI-PO. 
+Vous devez installer la librairie `python-dotenv` que vous devez installer au préalable. Ensuitez, créez un fichier `.env` (tel quel, sans nom), entrez-y les lignes suivant :
+```
+#.env
+DISCORD_TOKEN=
+```
+Et copiez-collez la clé dérrière le `=`, sauvegardez dans le fichier où se trouve le main.py et autres, et vous pouvez à présenter lancer le code CI-PO en local !
 
 ### Critères d'éligibilité
 CI-PO est un code Orienté Objet Open Source, vous pouvez le copier et le refaire à votre sauce (en ajoutant une référence à ce code) ou proposer des modules à ajouter à cet instance. Car oui, il a été codé pour pouvoir ajouter autant de modules que l'on veut ! Il y a cependant quelques règles à respecter pour être éligible à un être un module CI-PO :
@@ -92,5 +117,5 @@ Concernant votre Objet qui créera gérera votre Embed Discord, il devra suivre 
 Pour toutes questions, rapportage de soucis ou de bug ou pour demander une aide pour installer le bot, veuillez contacter l'email :
     `julien.leclercq@cercle-informatique.be`
     
-## Crédit
-**Project Initiated and Fisrt Code by None**
+## Crédit & Historique MAJ
+* Project Initiated and First Code by [`None`](mail:julien.leclercq@cercle-informatique.be)

@@ -184,6 +184,7 @@ class Branche(FunctionsForTemplates):
 					await self.modify_branche(branche_setup_msg, 1)
 			else:
 				user = await super().who_writing(message.channel, 1)
+				user = user[0].mention
 				dict_branche['description'] = dict_branche['description'] + '\nBrancheur : '+user
 				new_embed_setup_msg = discord.Embed.from_dict(dict_branche)
 				await branche_setup_msg.edit(embed=new_embed_setup_msg)	
@@ -195,7 +196,7 @@ class Branche(FunctionsForTemplates):
 					answer = int(answer)
 					branche_setup_msg.embeds[0].set_field_at(0, name=branche_setup_msg.embeds[0].fields[0].name, value=str(answer))
 					await branche_setup_msg.edit(embed=branche_setup_msg.embeds[0])
-					await self.modify_branche(branche_setup_msg, 2)
+					await self.modify_branche(branche_setup_msg, 3)
 				except ValueError:
 					await branche_setup_msg.channel.send("Je n'ai pas compris votre réponse. Veuillez n'entrer qu'un nombre svp, rien d'autre.")
 					await self.modify_branche(branche_setup_msg, 2)
